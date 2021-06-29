@@ -23,21 +23,25 @@ candidates_set=set(all_votes)
 #Convert set to list 
 candidates_list=list(candidates_set)
 
-individual_votes=[]
+votes_per_candidate=[]
+candidate_percentage=[]
 #Count votes for each candidate
-#for num in range(len(candidates_list)):
-#    candidate_votes=0
-#    candidate_votes=all_votes.count(candidates_list[num]) 
-#    individual_votes.append(candidate_votes)
+for num in range(len(candidates_list)):
+    candidate_votes=0
+    vote_percentage=0
+    candidate_votes=all_votes.count(candidates_list[num])
+    vote_percentage=round(candidate_votes/vote_count,2)
+    votes_per_candidate.append(candidate_votes)
+    candidate_percentage.append(vote_percentage*100)
 
 #Print Statements 
-print("Election Results")
-print("------------------------")
-print(f"Total Votes: {vote_count}")
-print("------------------------")
+#print("Election Results")
+#print("------------------------")
+#print(f"Total Votes: {vote_count}")
+#print("------------------------")
 print(list(candidates_list))
-#print(list(individual_votes))
-
+print(list(votes_per_candidate))
+print(list(candidate_percentage))
 #Khan: 63.000% (2218231)
 #Correy: 20.000% (704200)
 #Li: 14.000% (492940)
