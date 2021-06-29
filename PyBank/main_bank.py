@@ -10,7 +10,6 @@ net_total=0
 profit_loss=[]
 pl_change=[]
 date_list=[]
-total_months=0
 
 #Open CSV file and begin working with data
 with open(budget_csv, encoding='utf-8') as csvfile:
@@ -23,8 +22,10 @@ with open(budget_csv, encoding='utf-8') as csvfile:
         net_total +=int(row[1])
         profit_loss.append(int(row[1]))
         date_list.append(row[0])
-        #Assumption: Each row in the csv file is a different month
-        total_months+= 1
+
+#By definition, Sets only contain unique elements, so when the list with all dates 
+# is converted to a set any duplicate date is removed.
+total_months=len(set(date_list))
 
 total_change=0
 #Calculate the changes over the entire period
