@@ -45,6 +45,8 @@ mx=pl_change.index(max_increase)+1
 mn=pl_change.index(min_increase)+1
 
 #Print Statements to Terminal
+print("Financial Analysis")
+print("-----------------------------------------------------------------")
 print(f"Total Months: {total_months}")
 print(f"Total: ${net_total}")
 print(f"Average Change: ${avg_change}")
@@ -55,6 +57,8 @@ print(f"Greatest Decrease in Profits: {date_list[mn]} (${min_increase})")
 #YOU HAVE TO CHANGE THIS PATH BECAUSE IT IS AN ABSOLUTE PATH AND WILL ONLY WORK ON MY COMPUTER
 f = open("C:/Users/Collin/Desktop/B.Upenn_Data_Analytics/D.Git_Push_Submitted_Homework_Repos/HW3/PyBank/Analysis/Results.txt", "w")
 #Write Results in file
+f.write("Financial Analyis\n")
+f.write("----------------------------------------\n")
 f.write(f"Total Months: {total_months} \n")
 f.write(f"Total: ${net_total} \n")
 f.write(f"Average Change: ${avg_change} \n")
