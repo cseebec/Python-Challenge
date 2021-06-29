@@ -23,7 +23,7 @@ with open(budget_csv, encoding='utf-8') as csvfile:
         net_total +=int(row[1])
         profit_loss.append(int(row[1]))
         date_list.append(row[0])
-        #Assumption made each row in the csv file is a different month
+        #Assumption: Each row in the csv file is a different month
         total_months+= 1
 
 total_change=0
@@ -43,11 +43,21 @@ min_increase=min(pl_change)
 mx=pl_change.index(max_increase)+1
 mn=pl_change.index(min_increase)+1
 
-#Print Statements
+#Print Statements to Terminal
 print(f"Total Months: {total_months}")
 print(f"Total: ${net_total}")
 print(f"Average Change: ${avg_change}")
 print(f"Greatest Increase in Profits: {date_list[mx]} (${max_increase})")
 print(f"Greatest Decrease in Profits: {date_list[mn]} (${min_increase})")
 
+
+#YOU HAVE TO CHANGE THIS PATH BECAUSE IT IS AN ABSOLUTE PATH AND WILL ONLY WORK ON MY COMPUTER
+f = open("C:/Users/Collin/Desktop/B.Upenn_Data_Analytics/D.Git_Push_Submitted_Homework_Repos/HW3/PyBank/Analysis/Results.txt", "w")
+#Write Results in file
+f.write(f"Total Months: {total_months} \n")
+f.write(f"Total: ${net_total} \n")
+f.write(f"Average Change: ${avg_change} \n")
+f.write(f"Greatest Increase in Profits: {date_list[mx]} (${max_increase}) \n")
+f.write(f"Greatest Decrease in Profits: {date_list[mn]} (${min_increase}) \n")
+f.close()
 
