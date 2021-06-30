@@ -54,8 +54,9 @@ print(f"Greatest Increase in Profits: {date_list[mx]} (${max_increase})")
 print(f"Greatest Decrease in Profits: {date_list[mn]} (${min_increase})")
 
 
-#YOU HAVE TO CHANGE THIS PATH BECAUSE IT IS AN ABSOLUTE PATH AND WILL ONLY WORK ON MY COMPUTER
-f = open("C:/Users/Collin/Desktop/B.Upenn_Data_Analytics/D.Git_Push_Submitted_Homework_Repos/HW3/PyBank/Analysis/Results.txt", "w")
+#Relative Path to the .txt
+textfile=os.path.join('..', 'Analysis', 'Results.txt')
+f=open(textfile,"w")
 #Write Results in file
 f.write("Financial Analyis\n")
 f.write("----------------------------------------\n")

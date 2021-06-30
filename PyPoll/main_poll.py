@@ -61,9 +61,10 @@ print("------------------------")
 #from most votes to least votes
 print(f"Winner: {candidate_in_order[0]}")
 
-#Print same statements to a .txt file
-#YOU HAVE TO CHANGE THIS PATH BECAUSE IT IS AN ABSOLUTE PATH AND WILL ONLY WORK ON MY COMPUTER
-f = open("C:/Users/Collin/Desktop/B.Upenn_Data_Analytics/D.Git_Push_Submitted_Homework_Repos/HW3/PyPoll/Analysis/Results.txt", "w")
+## Print same statements to a .txt file
+# Define path to the file 
+textfile=os.path.join('..', 'Analysis', 'Results.txt')
+f=open(textfile,"w")
 #Write Results in file
 f.write("Election Results\n")
 f.write("------------------------\n")
