@@ -14,8 +14,8 @@ date_list=[]
 #Open CSV file and begin working with data
 with open(budget_csv, encoding='utf-8') as csvfile:
     csvreader=csv.reader(csvfile,delimiter=',')
-    #Skip Header Row
-    next(csvreader)
+    #Read in header row
+    csv_header=next(csvreader)
     #Loop Through rest of rows
     for row in csvreader:
         #Calculate the Net Total 
