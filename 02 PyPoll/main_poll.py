@@ -3,7 +3,7 @@ import os
 import csv
 
 #Relative Path to election_data
-election_csv=os.path.join('..', 'Resources', 'election_data.csv')
+election_csv=os.path.join('Resources', 'election_data.csv')
 
 #Initialize variables
 vote_count=0
@@ -63,7 +63,7 @@ print(f"Winner: {candidate_in_order[0]}")
 
 ## Print same statements to a .txt file
 # Define path to the file 
-textfile=os.path.join('..', 'Analysis', 'Results.txt')
+textfile=os.path.join('Analysis', 'Results.txt')
 f=open(textfile,"w")
 #Write Results in file
 f.write("Election Results\n")

@@ -3,7 +3,7 @@ import os
 import csv
 
 #Relative Path to budget_data
-budget_csv=os.path.join('..', 'Resources', 'budget_data.csv')
+csvpath=os.path.join('Resources', 'budget_data.csv')
 
 #Initialize variables
 net_total=0
@@ -12,7 +12,7 @@ pl_change=[]
 date_list=[]
 
 #Open CSV file and begin working with data
-with open(budget_csv, encoding='utf-8') as csvfile:
+with open(csvpath, encoding='utf-8') as csvfile:
     csvreader=csv.reader(csvfile,delimiter=',')
     #Read in header row
     csv_header=next(csvreader)
@@ -55,7 +55,7 @@ print(f"Greatest Decrease in Profits: {date_list[mn]} (${min_increase})")
 
 
 #Relative Path to the .txt
-textfile=os.path.join('..', 'Analysis', 'Results.txt')
+textfile=os.path.join('Analysis', 'Results.txt')
 f=open(textfile,"w")
 #Write Results in file
 f.write("Financial Analyis\n")
