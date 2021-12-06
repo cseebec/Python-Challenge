@@ -3,7 +3,7 @@
 * The python scripts perform similar functions, but there are differences between them. One python script performs analysis on bank data and the other is analyzing voting poll data
 ### Important Note
 * In order to run either file without errors you must be in the correct folder in Python. This means you must go to "Open Folder" in Python and open the appropriate folder or else the relative path will not work and the code will crash
-  * For main_bank.py you must open the "01 PyBank" folder. 
+  * For main_bank.py you must open the "01 PyBank" folder
   * For main_poll.py you must open the "02 PyPoll" folder
 
 # PyBank
